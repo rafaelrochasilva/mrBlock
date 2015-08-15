@@ -1,12 +1,12 @@
 Game.MainState = (function() {
-  function MainState(){
+  function MainState() {
   }
 
   var fn = MainState.prototype;
 
-  // It will be executed at the beginning
-  // Loads the game's assets
+  // Firstly it loads the game's assets
   fn.preload = function() {
+    new Game.Preloader(this.game);
   };
 
   // Called after the preload
@@ -21,7 +21,7 @@ Game.MainState = (function() {
   // Called 60 times per second
   // contains the game logic
   fn.update = function() {
-    console.log('running...')
+    this.player.move();
   };
 
   return MainState;
