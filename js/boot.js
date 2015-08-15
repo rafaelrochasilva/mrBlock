@@ -1,11 +1,10 @@
 var Game = window.Game || {};
 
-// document.addEventListener('DOMContentLoaded', function() {
-window.onload = (function(){
-  var pacGame = new Phaser.Game(500, 350, Phaser.Auto, 'game');
+window.onload = function() {
+  var mrBlockGame = new Phaser.Game(500, 350, Phaser.Auto, 'game');
 
   // A reference to the GameObjectFactory which can be used
   // to add new objects to the World.
-  pacGame.state.add('main', new Game.MainState());
-  pacGame.state.start('main');
-});
+  mrBlockGame.state.add('main', new Game.MainState());
+  mrBlockGame.state.start('main');
+};
