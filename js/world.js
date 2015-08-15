@@ -5,7 +5,7 @@ Game.World = (function() {
     this.game = game;
     this.game.stage.backgroundColor = BACKGROUND_COLOR;
 
-    // Create our wall group with Arcade physics
+    // Create wall group with Arcade physics
     this.walls = this.game.add.group();
     this.walls.enableBody = true;
 
