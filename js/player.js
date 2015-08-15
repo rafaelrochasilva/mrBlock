@@ -1,5 +1,5 @@
 Game.Player = (function() {
-  var VELOCITY = 200;
+  var VELOCITY = 100;
 
   function Player(name, game) {
     this.name = name;
@@ -27,7 +27,7 @@ Game.Player = (function() {
 
   fn.move = function() {
     if (this.cursor.left.isDown) {
-      this.player.body.velocity.x -= VELOCITY;
+      this.player.body.velocity.x = -VELOCITY;
     }
     else if(this.cursor.right.isDown) {
       this.player.body.velocity.x = VELOCITY;
