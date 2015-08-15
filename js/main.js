@@ -11,7 +11,7 @@ Game.MainState = (function() {
 
   // Called after the preload
   fn.create = function() {
-    this.game.stage.backgroundColor = '#3498db';
+    this.world = new Game.World(this.game);
 
     this.player = new Game.Player('Mr. Block', this.game);
 
@@ -21,6 +21,7 @@ Game.MainState = (function() {
   // Called 60 times per second
   // contains the game logic
   fn.update = function() {
+    this.game.physics.arcade.collide(this.player.player, this.world.walls);
     this.player.move();
   };
 
